@@ -40,7 +40,14 @@ class Application {
 	}
 
 	fire(message, data) {
-		this.fireTarget.postMessage({eventname: message, payload: data}, "*");
+		var cd = {};
+		for(var key in data) {
+			if(data.hasOwnProperty(key)) {
+				cd[key] = data[key];
+			}
+		}
+		
+		this.fireTarget.postMessage({eventname: message, payload: cd}, "*");
 	}
 
 	listen(message, callback) {
