@@ -1,13 +1,22 @@
 {
   "devDependencies": {
+    "cordova-android": "^9.0.0",
     "cordova-plugin-whitelist": "1"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-kiosk-launcher": {},
+      "cordova-plugin-bluetoothle": {},
+      "cordova-plugin-permission": {}
     },
     "platforms": [
       "android"
     ]
+  },
+  "dependencies": {
+    "cordova-plugin-bluetoothle": "^4.5.7",
+    "cordova-plugin-kiosk-launcher": "^1.1.1",
+    "cordova-plugin-permission": "^0.1.0"
   }
 }
